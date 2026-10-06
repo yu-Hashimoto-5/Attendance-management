@@ -3,7 +3,7 @@
 namespace App\Models;
 
 use Illuminate\Database\Eloquent\Model;
-use App\Models\Breaks;
+use App\Models\BreakModel;
 use App\Models\AttendanceRequest;
 
 class Attendance extends Model
@@ -22,7 +22,7 @@ class Attendance extends Model
     }
     public function breaks()
     {
-        return $this->hasMany(Breaks::class);
+        return $this->hasMany(BreakModel::class);
     }
     public function requests()
     {
